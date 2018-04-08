@@ -6,6 +6,6 @@ Place the ubm file into
 
 * /usr/share/X11/xkb/symbols
 
-and add the evdev.xml snippet to inside the closing </layoutList> tag inside the evdev.xml file at
+and add the evdev.xml snippet to inside the closing layoutList tag inside the evdev.xml file at
 
 * /usr/share/X11/xkb/rules/
