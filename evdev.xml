@@ -1,0 +1,11 @@
+// place into /usr/share/X11/xkb/rules/evdev.xml at the end of "layoutlist"
+    <layout>
+      <configItem>
+        <name>ubm</name>
+        <shortDescription>Mac Ubuntu</shortDescription>
+        <description>English Mac Layout for Ubuntu</description>
+        <languageList>
+          <iso639Id>eng</iso639Id>
+        </languageList>
+      </configItem>
+    </layout>

@@ -1,0 +1,189 @@
+// symbols definition for a Macintosh / Ubuntu "Extended" keyboard
+
+default xkb_symbols "basic" {
+
+    name[Group1] = "UK - UBM";
+    key <ESC>  {    [ Escape            ]   };
+
+    key <TLDE> {    [     section,          plusminus ]    };
+    key <AE01> {    [     1,    exclam      ]   };
+    key <AE02> {    [     2,    at,         EuroSign    ]   };
+    key <AE03> {    [     3,    sterling,   numbersign  ]   };
+    key <AE04> {    [     4,    dollar      ]   };
+    key <AE05> {    [     5,    percent     ]   };
+    key <AE06> {    [     6,    asciicircum ]   };
+    key <AE07> {    [     7,    ampersand   ]   };
+    key <AE08> {    [     8,    asterisk    ]   };
+    key <AE09> {    [     9,    parenleft   ]   };
+    key <AE10> {    [     0,    parenright  ]   };
+    key <AE11> {    [     minus,    underscore  ]   };
+    key <AE12> {    [     equal,    plus        ]   };
+
+    key <AD01> {    [     q,    Q       ]   };
+    key <AD02> {    [     w,    W       ]   };
+    key <AD03> {    [     e,    E       ]   };
+    key <AD04> {    [     r,    R       ]   };
+    key <AD05> {    [     t,    T       ]   };
+    key <AD06> {    [     y,    Y       ]   };
+    key <AD07> {    [     u,    U       ]   };
+    key <AD08> {    [     i,    I       ]   };
+    key <AD09> {    [     o,    O       ]   };
+    key <AD10> {    [     p,    P       ]   };
+    key <AD11> {    [ bracketleft,  braceleft   ]   };
+    key <AD12> {    [ bracketright, braceright  ]   };
+    key <BKSL> {    [ backslash,    bar     ]   };
+
+    key <AC01> {    [     a,    A       ]   };
+    key <AC02> {    [     s,    S       ]   };
+    key <AC03> {    [     d,    D       ]   };
+    key <AC04> {    [     f,    F       ]   };
+    key <AC05> {    [     g,    G       ]   };
+    key <AC06> {    [     h,    H       ]   };
+    key <AC07> {    [     j,    J       ]   };
+    key <AC08> {    [     k,    K       ]   };
+    key <AC09> {    [     l,    L       ]   };
+    key <AC10> {    [ semicolon,    colon       ]   };
+    key <AC11> {    [ apostrophe,   quotedbl    ]   };
+
+    key <AB01> {    [     z,    Z       ]   };
+    key <AB02> {    [     x,    X       ]   };
+    key <AB03> {    [     c,    C       ]   };
+    key <AB04> {    [     v,    V       ]   };
+    key <AB05> {    [     b,    B       ]   };
+    key <AB06> {    [     n,    N       ]   };
+    key <AB07> {    [     m,    M       ]   };
+    key <AB08> {    [     comma,    less        ]   };
+    key <AB09> {    [    period,    greater     ]   };
+    key <AB10> {    [     slash,    question    ]   };
+
+    key <SPCE> {    [  space            ]   };
+
+    include "eurosign(e)"
+    include "keypad(overlay)"
+
+    key <KPEQ> {    [  equal            ]   };
+
+    // F1..F12 are multimedia keys when used with the 'Fn' key
+    // Make those multimedia actions available via ISO_Level3_Shift too,
+    // it is useful when the Fn key is remapped to something else (e.g. Insert)
+    key <FK01> {
+      type= "FOUR_LEVEL_X",
+      symbols[Group1]= [ NoSymbol, XF86KbdBrightnessDown, NoSymbol, XF86_Switch_VT_1 ]
+    };
+    key <FK02> {
+      type= "FOUR_LEVEL_X",
+      symbols[Group1]= [ NoSymbol, XF86KbdBrightnessUp, NoSymbol, XF86_Switch_VT_2 ]
+    };
+    key <FK03> {
+      type= "FOUR_LEVEL_X",
+      symbols[Group1]= [ NoSymbol, NoSymbol, NoSymbol, XF86_Switch_VT_3 ]
+    };
+    key <FK04> {
+      type= "FOUR_LEVEL_X",
+      symbols[Group1]= [ NoSymbol, NoSymbol, NoSymbol, XF86_Switch_VT_4 ]
+    };
+    key <FK05> {
+      type= "FOUR_LEVEL_X",
+      symbols[Group1]= [ NoSymbol, NoSymbol, NoSymbol, XF86_Switch_VT_5 ]
+    };
+    key <FK06> {
+      type= "FOUR_LEVEL_X",
+      symbols[Group1]= [ NoSymbol, NoSymbol, NoSymbol, XF86_Switch_VT_6 ]
+    };
+    key <FK07> {
+      type= "FOUR_LEVEL_X",
+      symbols[Group1]= [ NoSymbol, XF86AudioPrev, NoSymbol, XF86_Switch_VT_7 ]
+    };
+    key <FK08> {
+      type= "FOUR_LEVEL_X",
+      symbols[Group1]= [ NoSymbol, XF86AudioPlay, NoSymbol, XF86_Switch_VT_8 ]
+    };
+    key <FK09> {
+      type= "FOUR_LEVEL_X",
+      symbols[Group1]= [ NoSymbol, XF86AudioNext, NoSymbol, XF86_Switch_VT_9 ]
+    };
+    key <FK10> {
+      type= "FOUR_LEVEL_X",
+      symbols[Group1]= [ NoSymbol, XF86AudioMute, NoSymbol, XF86_Switch_VT_10 ]
+    };
+    key <FK11> {
+      type= "FOUR_LEVEL_X",
+      symbols[Group1]= [ NoSymbol, XF86AudioLowerVolume, NoSymbol, XF86_Switch_VT_11 ]
+    };
+    key <FK12> {
+      type= "FOUR_LEVEL_X",
+      symbols[Group1]= [ NoSymbol, XF86AudioRaiseVolume, NoSymbol, XF86_Switch_VT_12 ]
+    };
+
+    // Begin "Editing" section
+    key   <UP> {    [  Up       ]   };
+    key <LEFT> {    [  Left     ]   };
+    key <DOWN> {    [  Down     ]   };
+    key <RGHT> {    [  Right    ]   };
+    // End "Editing" section
+
+    key <BKSP> {    [ BackSpace ]   };
+    key  <TAB> {    [ Tab,  ISO_Left_Tab ]  };
+    key <RTRN> {    [ Return    ]   };
+    key <CAPS> {    [ Caps_Lock ]   };
+
+    // Begin "Modifier" section
+    key <LFSH> {    [  Shift_L  ]   };
+    key <RTSH> {    [  Shift_R  ]   };
+    // key <LCTL> {    [  Control_L    ]   };
+    // key <RCTL> {    [  Control_R    ]   };
+    key <LCTL> {    [  Super_L    ]   };
+    key <RCTL> {    [  Super_R    ]   };
+    key <LALT> {    [  Alt_L, Meta_L ]  };
+    key <RALT> {    [  Alt_R, Meta_R ]  };
+    key <LWIN> {    [  Control_L  ]   }; // should be Control_L
+    // key <LWIN> {    [  Super_L  ]   }; // should be Control_L
+    key <RWIN> {    [  Super_R  ]   }; 
+    // End "Modifier" section
+
+    // begin modifier mappings
+    modifier_map Shift  { Shift_L, Shift_R };
+    modifier_map Lock   { Caps_Lock };
+    // modifier_map Control{ Control_L, Control_R };
+    modifier_map Control{ Super_L, Super_R };
+    // modifier_map Mod2   { Num_Lock };
+
+    //  Fake keys for virtual<->real modifiers mapping 
+    key <LVL3> {    [ ISO_Level3_Shift  ]   };
+    key <MDSW> {    [ Mode_switch       ]   };
+    modifier_map Mod5   { <LVL3>, <MDSW> };
+
+    key <ALT>  {    [ NoSymbol, Alt_L   ]   };
+    modifier_map Mod1   { <ALT>, <LALT> };
+
+    key <META> {    [ NoSymbol, Meta_L  ]   };
+    modifier_map Mod1   { <META> };
+
+    key <SUPR> {    [ NoSymbol, Super_L ]   };
+    modifier_map Mod4   { <SUPR> };
+
+    key <HYPR> {    [ NoSymbol, Hyper_L ]   };
+    modifier_map Mod4   { <HYPR> };
+    // end modifier mappings
+
+    key <LSGT> {    [ grave, asciitilde ]    };
+
+    include "level3(ralt_switch)"
+
+
+};
+
+
+partial modifier_keys
+xkb_symbols "laptop" {
+    // The key engraved Delete sends BKSP. To get Delete, use Shift-Delete
+    override key <BKSP> { [ BackSpace, Delete ] };
+    // These keyboards only generate a <RALT> when pressing fn+Alt. This makes
+    // it impossible to get to the third shift level on keys that are on
+    // the fn-keypad, so use the Enter key (right of <SPC>) for Mode_switch,
+    // and use fn+Enter (Apple's code for Menu) for KP_Enter.
+    replace key <KPEN> { [ ISO_Level3_Shift ] };
+    modifier_map Mod5  { ISO_Level3_Shift };    
+};
+
+
